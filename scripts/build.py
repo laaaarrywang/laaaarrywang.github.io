@@ -29,7 +29,7 @@ def linked_text(value):
     names = set(references) | set(icons)
     if not names:
         return text(value)
-    pattern = '(' + '|'.join(re.escape(n) for n in sorted(names, key=len, reverse=True)) + ')'
+    pattern = r'(?<!\w)(' + '|'.join(re.escape(n) for n in sorted(names, key=len, reverse=True)) + r')(?!\w)'
     parts = []
     for part in re.split(pattern, str(value)):
         label = link({'label': part, 'url': references[part]}) if part in references else text(part)
@@ -51,7 +51,7 @@ news = ''.join(f'<li><time>{text(n["date"])}</time><span>{text(n["text"])}' +
 pubs = []
 for p in data.get('publications', []):
     image = f'<a class="publication-image" href="{url(p["image"])}" aria-label="View figure for {text(p["title"])}"><img src="{url(p["image"])}" alt="{text(p.get("image_alt", p["title"]))}" loading="lazy" width="200" height="140"></a>' if p.get('image') else ''
-    authors = ', '.join(f'<strong>{text(a)}</strong>' if a.rstrip('*') == data['name'] else linked_text(a) for a in p['authors'])
+    authors = ', '.join(f'<strong>{text(a)}</strong>' if a.rstrip('*') == data['name'] else text(a) for a in p['authors'])
     abstract = f'<details><summary>Abstract</summary><p>{text(p["abstract"])}</p></details>' if p.get('abstract') else ''
     summary = f'<p class="paper-summary">{text(p["summary"])}</p>' if p.get('summary') else ''
     pubs.append(f'<article class="publication {"with-image" if image else ""}">{image}<div><h3>{text(p["title"])}</h3><p class="authors">{authors}</p><p class="venue">{text(p["venue"])}' + (f' <span class="badge">{text(p["award"])}</span>' if p.get('award') else '') + f'</p>{summary}<div class="paper-links">{" ".join(link(l) for l in p.get("links", []))}</div>{abstract}</div></article>')

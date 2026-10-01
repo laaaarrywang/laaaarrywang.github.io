@@ -181,12 +181,9 @@
   "service": "Conference reviewer: ICLR 2027.",
   "name_links": {
     "Guang Lin": "https://www.math.purdue.edu/~lin491/",
-    "G. Lin": "https://www.math.purdue.edu/~lin491/",
     "Qifan Song": "https://www.stat.purdue.edu/~qfsong/",
-    "Q. Song": "https://www.stat.purdue.edu/~qfsong/",
     "Surya Tokdar": "https://www2.stat.duke.edu/~st118/",
-    "Jianguo Li": "https://sites.google.com/site/leeplus/home?authuser=0",
-    "J. Li": "https://sites.google.com/site/leeplus/home?authuser=0"
+    "Jianguo Li": "https://sites.google.com/site/leeplus/home?authuser=0"
   },
   "institution_icons": {
     "Purdue University": "assets/institutions/purdue.png",

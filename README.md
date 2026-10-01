@@ -12,7 +12,7 @@ Publication figures: `assets/scdd.png` is the training/inference panel extracted
 
 `assets/se3-meanflow.png` is the few-step inference diagram (Figure 1, page 3) extracted from `Downloads/se3meanflow.pdf`.
 
-Inline institution icons come from Purdue's official favicon (`https://www.purdue.edu/home/wp-content/mu-plugins/boilerup-wp/favicon/favicon-96x96.png`), Duke's official favicon (`https://www.duke.edu/wp-content/uploads/2025/12/cropped-dfavicon-1-192x192.png`), Wuhan University's official favicon (`https://www.whu.edu.cn/new2024/images/favicon.png`), and the Ant Group mark in `logo/logoantgroup.png` inside `Downloads/UBTree_Preprint.zip`.
+Inline institution icons come from Purdue's official favicon (`https://www.purdue.edu/home/wp-content/mu-plugins/boilerup-wp/favicon/favicon-96x96.png`), Duke's official favicon (`https://www.duke.edu/wp-content/uploads/2025/12/cropped-dfavicon-1-192x192.png`), Wuhan University's dark green and navy emblem (`https://upload.wikimedia.org/wikipedia/en/6/68/Wuhan_University_Logo.png`), and the Ant Group mark in `logo/logoantgroup.png` inside `Downloads/UBTree_Preprint.zip`.
 
 Edit `content.json`. Put your portrait in `assets/portrait.jpg` and set `photo` to that path. Put a CV in `assets/cv.pdf` and add a link. Empty experience entries are hidden; empty news and publication sections show a short placeholder.
 
