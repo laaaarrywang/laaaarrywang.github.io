@@ -56,7 +56,7 @@ Open http://localhost:8000. Rebuild after editing content. You can also open `in
 ```bash
 git add .
 git commit -m "Create academic homepage"
-git remote add origin git@github.com:laaaarrywang/laaaarrywang.github.io.git
+git remote set-url origin git@github.com:laaaarrywang/laaaarrywang.github.io.git
 git push -u origin main
 ```
 
