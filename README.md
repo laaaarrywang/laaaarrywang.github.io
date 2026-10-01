@@ -6,6 +6,8 @@ A responsive, English academic homepage inspired by the simple layouts of https:
 
 Content is based on your September 2026 CV and your confirmation that you are a third-year Statistics PhD student at Purdue. Publication statuses follow the CV; UBTree is labeled as a submission, not an accepted paper. Add your portrait and Google Scholar URL when available. Your original resume PDF is included as the CV download.
 
+Publication figures: `assets/scdd.png` is the training/inference panel extracted from `Desktop/icml2026/poster-LinxuanWang-ICML2026.pdf`; `assets/ubtree.png` is the architecture panel from `figures/ubtree_diagram.pdf` inside `Downloads/UBTree_Preprint.zip`. Clicking either thumbnail opens the full-size image.
+
 Edit `content.json`. Put your portrait in `assets/portrait.jpg` and set `photo` to that path. Put a CV in `assets/cv.pdf` and add a link. Empty experience entries are hidden; empty news and publication sections show a short placeholder.
 
 Example content entries (replace every example value with your own information):

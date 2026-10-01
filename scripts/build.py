@@ -35,7 +35,7 @@ news = ''.join(f'<li><time>{text(n["date"])}</time><span>{text(n["text"])}' +
                for n in data.get('news', []))
 pubs = []
 for p in data.get('publications', []):
-    image = f'<img src="{url(p["image"])}" alt="{text(p.get("image_alt", p["title"]))}" loading="lazy" width="200" height="140">' if p.get('image') else ''
+    image = f'<a class="publication-image" href="{url(p["image"])}" aria-label="View figure for {text(p["title"])}"><img src="{url(p["image"])}" alt="{text(p.get("image_alt", p["title"]))}" loading="lazy" width="200" height="140"></a>' if p.get('image') else ''
     authors = ', '.join(f'<strong>{text(a)}</strong>' if a.rstrip('*') == data['name'] else text(a) for a in p['authors'])
     abstract = f'<details><summary>Abstract</summary><p>{text(p["abstract"])}</p></details>' if p.get('abstract') else ''
     summary = f'<p class="paper-summary">{text(p["summary"])}</p>' if p.get('summary') else ''

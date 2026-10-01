@@ -66,7 +66,9 @@
           "url": "https://arxiv.org/abs/2609.39972"
         }
       ],
-      "summary": "Parallel tree drafting with a bigram selector and tree-native training for efficient speculative decoding."
+      "summary": "Parallel tree drafting with a bigram selector and tree-native training for efficient speculative decoding.",
+      "image": "assets/ubtree.png",
+      "image_alt": "UBTree architecture: parallel unigram candidate proposals and bigram transition scoring construct a verification tree."
     },
     {
       "title": "Generalized Discrete Diffusion with Self-Correction",
@@ -97,7 +99,9 @@
           "url": "https://github.com/NVIDIA-NeMo/Automodel/blob/main/docs/guides/dllm/finetune.mdx"
         }
       ],
-      "summary": "Learning remask-free self-correction during discrete diffusion pretraining to improve parallel language generation."
+      "summary": "Learning remask-free self-correction during discrete diffusion pretraining to improve parallel language generation.",
+      "image": "assets/scdd.png",
+      "image_alt": "SCDD training and inference: clean tokens are corrupted, a denoiser learns token predictions with an ELBO objective, and generation uses ancestral sampling."
     },
     {
       "title": "SE(3)-MeanFlow: Few-Step Protein Backbone Generation on Lie Groups",

@@ -4,3 +4,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 .paper-summary{font-size:14px;color:var(--muted);margin-bottom:10px}.contribution-note{font-size:12px;color:var(--muted);margin-top:-12px;margin-bottom:23px}
+
+.publication-image{display:block;align-self:start}.publication-image:hover img{border-color:var(--blue)}
