@@ -1,5 +1,6 @@
 """Build a dependency-free academic homepage from content.json."""
 import json
+import re
 import shutil
 from datetime import date
 from html import escape
@@ -22,6 +23,14 @@ def url(value):
 def link(item):
     return f'<a href="{url(item["url"])}">{text(item["label"])}</a>'
 
+def linked_text(value):
+    references = data.get('name_links', {})
+    if not references:
+        return text(value)
+    pattern = '(' + '|'.join(re.escape(n) for n in sorted(references, key=len, reverse=True)) + ')'
+    return ''.join(link({'label': part, 'url': references[part]}) if part in references else text(part)
+                   for part in re.split(pattern, str(value)))
+
 name = text(data['name'])
 initials = ''.join(word[0] for word in data['name'].split()[:2])
 photo = (f'<img class="portrait" src="{url(data["photo"])}" alt="Portrait of {name}" width="220" height="220">'
@@ -29,14 +38,14 @@ photo = (f'<img class="portrait" src="{url(data["photo"])}" alt="Portrait of {na
 links = list(data.get('links', []))
 if data.get('email'):
     links.insert(0, {'label': 'Email', 'url': 'mailto:' + data['email']})
-bio = ''.join(f'<p>{text(p)}</p>' for p in data.get('bio', []))
+bio = ''.join(f'<p>{linked_text(p)}</p>' for p in data.get('bio', []))
 news = ''.join(f'<li><time>{text(n["date"])}</time><span>{text(n["text"])}' +
                (f' {link(n["link"])}' if n.get('link') else '') + '</span></li>'
                for n in data.get('news', []))
 pubs = []
 for p in data.get('publications', []):
     image = f'<a class="publication-image" href="{url(p["image"])}" aria-label="View figure for {text(p["title"])}"><img src="{url(p["image"])}" alt="{text(p.get("image_alt", p["title"]))}" loading="lazy" width="200" height="140"></a>' if p.get('image') else ''
-    authors = ', '.join(f'<strong>{text(a)}</strong>' if a.rstrip('*') == data['name'] else text(a) for a in p['authors'])
+    authors = ', '.join(f'<strong>{text(a)}</strong>' if a.rstrip('*') == data['name'] else linked_text(a) for a in p['authors'])
     abstract = f'<details><summary>Abstract</summary><p>{text(p["abstract"])}</p></details>' if p.get('abstract') else ''
     summary = f'<p class="paper-summary">{text(p["summary"])}</p>' if p.get('summary') else ''
     pubs.append(f'<article class="publication {"with-image" if image else ""}">{image}<div><h3>{text(p["title"])}</h3><p class="authors">{authors}</p><p class="venue">{text(p["venue"])}' + (f' <span class="badge">{text(p["award"])}</span>' if p.get('award') else '') + f'</p>{summary}<div class="paper-links">{" ".join(link(l) for l in p.get("links", []))}</div>{abstract}</div></article>')
