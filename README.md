@@ -4,7 +4,7 @@ A responsive, English academic homepage inspired by the simple layouts of https:
 
 ## Before publishing
 
-Content is based on your September 2026 CV and your confirmation that you are a third-year Statistics PhD student at Purdue. Publication statuses follow the CV; UBTree is labeled as a preprint. The portrait uses `Downloads/DSC08344.jpg`, copied to `assets/portrait.jpg` and framed with CSS. Add your Google Scholar URL when available. Your original resume PDF is included as the CV download.
+Content is based on your September 2026 CV and your confirmation that you are a third-year Statistics PhD student at Purdue. Publication statuses follow the CV; UBTree is labeled as a preprint. The portrait uses `Downloads/DSC07571.JPG`, copied to `assets/portrait-dsc07571.jpg` and framed with CSS. Add your Google Scholar URL when available. Your original resume PDF is included as the CV download.
 
 Publication figures: `assets/scdd.png` is the training/inference panel extracted from `Desktop/icml2026/poster-LinxuanWang-ICML2026.pdf`; `assets/ubtree.png` is the architecture panel from `figures/ubtree_diagram.pdf` inside `Downloads/UBTree_Preprint.zip`. Clicking either thumbnail opens the full-size image.
 
