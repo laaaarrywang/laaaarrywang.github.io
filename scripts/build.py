@@ -63,7 +63,7 @@ html = f'''<!doctype html>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><a class="wordmark" href="#about">{name}</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#news">News</a><a href="#publications">Publications</a>{'<a href="#experience">Experience</a>' if experience else ''}</nav></header>
   <main id="main">
-    <section id="about" class="about"><div class="intro"><p class="eyebrow">Artificial Intelligence</p><h1>{name}</h1>{f'<p class="affiliation">{text(data["affiliation"])}</p>' if data.get('affiliation') else ''}<div class="bio">{bio}</div><div class="profile-links">{'<span aria-hidden="true">/</span>'.join(link(l) for l in links)}</div></div><div class="photo-wrap">{photo}</div></section>
+    <section id="about" class="about"><div class="intro"><h1>{name}</h1>{f'<p class="affiliation">{text(data["affiliation"])}</p>' if data.get('affiliation') else ''}<div class="bio">{bio}</div><div class="profile-links">{'<span aria-hidden="true">/</span>'.join(link(l) for l in links)}</div></div><div class="photo-wrap">{photo}</div></section>
     <section id="news"><h2>News</h2>{f'<ul class="news-list">{news}</ul>' if news else '<p class="empty">Updates will be added here.</p>'}</section>
     <section id="publications"><div class="section-heading"><h2>Publications &amp; Preprints</h2>{f'<a href="{url(data["scholar"])}">All publications ↗</a>' if data.get('scholar') else ''}</div>{'<p class="contribution-note">* Equal contribution.</p>' if any('*' in a for p in data.get('publications', []) for a in p['authors']) else ''}{''.join(pubs) if pubs else '<p class="empty">Publications will be added here.</p>'}</section>
     {experience_section}
