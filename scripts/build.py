@@ -25,19 +25,25 @@ def link(item):
 
 def linked_text(value):
     references = data.get('name_links', {})
-    if not references:
+    icons = data.get('institution_icons', {})
+    names = set(references) | set(icons)
+    if not names:
         return text(value)
-    pattern = '(' + '|'.join(re.escape(n) for n in sorted(references, key=len, reverse=True)) + ')'
-    return ''.join(link({'label': part, 'url': references[part]}) if part in references else text(part)
-                   for part in re.split(pattern, str(value)))
+    pattern = '(' + '|'.join(re.escape(n) for n in sorted(names, key=len, reverse=True)) + ')'
+    parts = []
+    for part in re.split(pattern, str(value)):
+        label = link({'label': part, 'url': references[part]}) if part in references else text(part)
+        if part in icons:
+            label = f'<span class="institution"><img class="institution-icon" src="{url(icons[part])}" alt="" width="18" height="18">{label}</span>'
+        parts.append(label)
+    return ''.join(parts)
 
 name = text(data['name'])
 initials = ''.join(word[0] for word in data['name'].split()[:2])
 photo = (f'<img class="portrait" src="{url(data["photo"])}" alt="Portrait of {name}" width="220" height="220">'
          if data.get('photo') else f'<div class="portrait initials" aria-label="{name}">{text(initials)}</div>')
 links = list(data.get('links', []))
-if data.get('email'):
-    links.insert(0, {'label': 'Email', 'url': 'mailto:' + data['email']})
+email = f'<p class="contact-email">Email: {text(data["email"].replace("@", " [at] ").replace(".", " [dot] "))}</p>' if data.get('email') else ''
 bio = ''.join(f'<p>{linked_text(p)}</p>' for p in data.get('bio', []))
 news = ''.join(f'<li><time>{text(n["date"])}</time><span>{text(n["text"])}' +
                (f' {link(n["link"])}' if n.get('link') else '') + '</span></li>'
@@ -49,9 +55,9 @@ for p in data.get('publications', []):
     abstract = f'<details><summary>Abstract</summary><p>{text(p["abstract"])}</p></details>' if p.get('abstract') else ''
     summary = f'<p class="paper-summary">{text(p["summary"])}</p>' if p.get('summary') else ''
     pubs.append(f'<article class="publication {"with-image" if image else ""}">{image}<div><h3>{text(p["title"])}</h3><p class="authors">{authors}</p><p class="venue">{text(p["venue"])}' + (f' <span class="badge">{text(p["award"])}</span>' if p.get('award') else '') + f'</p>{summary}<div class="paper-links">{" ".join(link(l) for l in p.get("links", []))}</div>{abstract}</div></article>')
-experience = ''.join(f'<article class="experience"><div><h3>{text(e["role"])}</h3><p>{text(e["organization"])}</p></div><span>{text(e["dates"])}</span></article>' for e in data.get('experience', []))
+experience = ''.join(f'<article class="experience"><div><h3>{text(e["role"])}</h3><p>{linked_text(e["organization"])}</p></div><span>{text(e["dates"])}</span></article>' for e in data.get('experience', []))
 experience_section = f'<section id="experience"><h2>Experience</h2>{experience}</section>' if experience else ''
-education = ''.join(f'<article class="experience"><div><h3>{text(e["organization"])}</h3><p>{text(e["role"])}</p></div><span>{text(e["dates"])}</span></article>' for e in data.get('education', []))
+education = ''.join(f'<article class="experience"><div><h3>{linked_text(e["organization"])}</h3><p>{text(e["role"])}</p></div><span>{text(e["dates"])}</span></article>' for e in data.get('education', []))
 education_section = f'<section id="education"><h2>Education</h2>{education}</section>' if education else ''
 service_section = f'<section id="service"><h2>Academic Service</h2><p>{text(data["service"])}</p></section>' if data.get('service') else ''
 html = f'''<!doctype html>
@@ -72,7 +78,7 @@ html = f'''<!doctype html>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><a class="wordmark" href="#about">{name}</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#news">News</a><a href="#publications">Publications</a>{'<a href="#experience">Experience</a>' if experience else ''}</nav></header>
   <main id="main">
-    <section id="about" class="about"><div class="intro"><h1>{name}</h1>{f'<p class="affiliation">{text(data["affiliation"])}</p>' if data.get('affiliation') else ''}<div class="bio">{bio}</div><div class="profile-links">{'<span aria-hidden="true">/</span>'.join(link(l) for l in links)}</div></div><div class="photo-wrap">{photo}</div></section>
+    <section id="about" class="about"><div class="intro"><h1>{name}</h1>{f'<p class="affiliation">{linked_text(data["affiliation"])}</p>' if data.get('affiliation') else ''}<div class="bio">{bio}</div>{email}<div class="profile-links">{'<span aria-hidden="true">/</span>'.join(link(l) for l in links)}</div></div><div class="photo-wrap">{photo}</div></section>
     <section id="news"><h2>News</h2>{f'<ul class="news-list">{news}</ul>' if news else '<p class="empty">Updates will be added here.</p>'}</section>
     <section id="publications"><div class="section-heading"><h2>Publications &amp; Preprints</h2>{f'<a href="{url(data["scholar"])}">All publications ↗</a>' if data.get('scholar') else ''}</div>{'<p class="contribution-note">* Equal contribution.</p>' if any('*' in a for p in data.get('publications', []) for a in p['authors']) else ''}{''.join(pubs) if pubs else '<p class="empty">Publications will be added here.</p>'}</section>
     {experience_section}

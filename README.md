@@ -4,13 +4,15 @@ A responsive, English academic homepage inspired by the simple layouts of https:
 
 ## Before publishing
 
-Content is based on your September 2026 CV and your confirmation that you are a third-year Statistics PhD student at Purdue. Publication statuses follow the CV; UBTree is labeled as a submission, not an accepted paper. Add your portrait and Google Scholar URL when available. Your original resume PDF is included as the CV download.
+Content is based on your September 2026 CV and your confirmation that you are a third-year Statistics PhD student at Purdue. Publication statuses follow the CV; UBTree is labeled as a preprint. Add your portrait and Google Scholar URL when available. Your original resume PDF is included as the CV download.
 
 Publication figures: `assets/scdd.png` is the training/inference panel extracted from `Desktop/icml2026/poster-LinxuanWang-ICML2026.pdf`; `assets/ubtree.png` is the architecture panel from `figures/ubtree_diagram.pdf` inside `Downloads/UBTree_Preprint.zip`. Clicking either thumbnail opens the full-size image.
 
 `assets/federated-hmc.png` is the centralized/federated HMC illustration (Figure 1 in `Downloads/adaptiveHMC_ADA___Copy_.pdf`), extracted from its matching source archive at `icml2024/Figures/motivation1.png`.
 
 `assets/se3-meanflow.png` is the few-step inference diagram (Figure 1, page 3) extracted from `Downloads/se3meanflow.pdf`.
+
+Inline institution icons come from Purdue's official favicon (`https://www.purdue.edu/home/wp-content/mu-plugins/boilerup-wp/favicon/favicon-96x96.png`), Duke's official favicon (`https://www.duke.edu/wp-content/uploads/2025/12/cropped-dfavicon-1-192x192.png`), Wuhan University's official favicon (`https://www.whu.edu.cn/new2024/images/favicon.png`), and the Ant Group mark in `logo/logoantgroup.png` inside `Downloads/UBTree_Preprint.zip`.
 
 Edit `content.json`. Put your portrait in `assets/portrait.jpg` and set `photo` to that path. Put a CV in `assets/cv.pdf` and add a link. Empty experience entries are hidden; empty news and publication sections show a short placeholder.
 

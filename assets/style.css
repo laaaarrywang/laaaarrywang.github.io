@@ -6,3 +6,5 @@
 .paper-summary{font-size:14px;color:var(--muted);margin-bottom:10px}.contribution-note{font-size:12px;color:var(--muted);margin-top:-12px;margin-bottom:23px}
 
 .publication-image{display:block;align-self:start}.publication-image:hover img{border-color:var(--blue)}
+
+.institution-icon{width:18px;height:18px;object-fit:contain;vertical-align:-3px;margin-right:5px}.institution{white-space:nowrap}.contact-email{font-size:14px;margin:20px 0 0;color:var(--muted)}.contact-email+.profile-links{margin-top:9px}

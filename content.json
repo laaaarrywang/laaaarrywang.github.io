@@ -33,11 +33,11 @@
       }
     },
     {
-      "date": "2026",
+      "date": "Sep 2026",
       "text": "Our work on adaptive Hamiltonian Monte Carlo for federated sampling was accepted to NeurIPS 2026."
     },
     {
-      "date": "2026",
+      "date": "Apr 2026",
       "text": "Generalized Discrete Diffusion with Self-Correction was accepted to ICML 2026.",
       "link": {
         "label": "Project ↗",
@@ -59,7 +59,7 @@
         "Q. Song",
         "J. Li"
       ],
-      "venue": "Preprint, 2026 · Submitted to ICLR 2027",
+      "venue": "Preprint, 2026",
       "links": [
         {
           "label": "Paper",
@@ -187,5 +187,11 @@
     "Surya Tokdar": "https://www2.stat.duke.edu/~st118/",
     "Jianguo Li": "https://sites.google.com/site/leeplus/home?authuser=0",
     "J. Li": "https://sites.google.com/site/leeplus/home?authuser=0"
+  },
+  "institution_icons": {
+    "Purdue University": "assets/institutions/purdue.png",
+    "Duke University": "assets/institutions/duke.png",
+    "Wuhan University": "assets/institutions/wuhan.png",
+    "Ant Group": "assets/institutions/ant-group.png"
   }
 }
