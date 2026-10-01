@@ -1,0 +1,174 @@
+{
+  "name": "Linxuan Wang",
+  "description": "Linxuan Wang, Statistics PhD student at Purdue University. Research in efficient language models, discrete diffusion, and speculative decoding.",
+  "affiliation": "Department of Statistics · Purdue University",
+  "bio": [
+    "I am a third-year PhD student in Statistics at Purdue University, advised by Prof. Guang Lin and Prof. Qifan Song.",
+    "My research focuses on efficient large language models, ranging from diffusion language models to speculative decoding. I develop pretraining methods that teach diffusion language models to self-correct, and tree-based speculative decoding methods that accelerate LLM inference.",
+    "Previously, I received my M.S. in Statistics from Duke University, where I worked with Prof. Surya Tokdar, and my B.S. in Mathematics and B.A. in Economics from Wuhan University. In summer 2026, I was a research intern on the Inclusion AI LLaDA team at Ant Group, mentored by Dr. Jianguo Li."
+  ],
+  "email": "wang6559@purdue.edu",
+  "photo": "",
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/laaaarrywang"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/linxuan-wang-311b65188/"
+    },
+    {
+      "label": "CV",
+      "url": "assets/Linxuan_Wang_CV.pdf"
+    }
+  ],
+  "news": [
+    {
+      "date": "Sep 2026",
+      "text": "UBTree, our work on parallel tree drafting for speculative decoding, is available.",
+      "link": {
+        "label": "Paper ↗",
+        "url": "https://arxiv.org/abs/2609.39972"
+      }
+    },
+    {
+      "date": "2026",
+      "text": "Our work on adaptive Hamiltonian Monte Carlo for federated sampling was accepted to NeurIPS 2026."
+    },
+    {
+      "date": "2026",
+      "text": "Generalized Discrete Diffusion with Self-Correction was accepted to ICML 2026.",
+      "link": {
+        "label": "Project ↗",
+        "url": "https://laaaarrywang.github.io/Self-Correcting-Discrete-Diffusion/"
+      }
+    }
+  ],
+  "publications": [
+    {
+      "title": "UBTree: Parallel Tree Drafting via Unigram and Bigram Models for Speculative Decoding",
+      "authors": [
+        "C. Liang*",
+        "Linxuan Wang*",
+        "X. Peng*",
+        "H. Liu",
+        "Y. Chen",
+        "G. Liu",
+        "G. Lin",
+        "Q. Song",
+        "J. Li"
+      ],
+      "venue": "Preprint, 2026 · Submitted to ICLR 2027",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.39972"
+        }
+      ],
+      "summary": "Parallel tree drafting with a bigram selector and tree-native training for efficient speculative decoding."
+    },
+    {
+      "title": "Generalized Discrete Diffusion with Self-Correction",
+      "authors": [
+        "Linxuan Wang*",
+        "Z. Wang*",
+        "Y. Bai*",
+        "W. Deng",
+        "G. Lin",
+        "Q. Song"
+      ],
+      "venue": "ICML 2026",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2603.02230"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/laaaarrywang/Self-Correcting-Discrete-Diffusion"
+        },
+        {
+          "label": "Project",
+          "url": "https://laaaarrywang.github.io/Self-Correcting-Discrete-Diffusion/"
+        },
+        {
+          "label": "NVIDIA NeMo",
+          "url": "https://github.com/NVIDIA-NeMo/Automodel/blob/main/docs/guides/dllm/finetune.mdx"
+        }
+      ],
+      "summary": "Learning remask-free self-correction during discrete diffusion pretraining to improve parallel language generation."
+    },
+    {
+      "title": "SE(3)-MeanFlow: Few-Step Protein Backbone Generation on Lie Groups",
+      "authors": [
+        "Y. Bai",
+        "B. Lu",
+        "Y. Liu",
+        "E. Akbari",
+        "S. Kolouri",
+        "Linxuan Wang",
+        "P. He",
+        "S. Wang",
+        "R. Zhang",
+        "G. Lin"
+      ],
+      "venue": "Preprint, 2026",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2607.27431"
+        }
+      ]
+    },
+    {
+      "title": "Breaking the √d Communication Barrier in Federated Sampling with Adaptive Hamiltonian Monte Carlo",
+      "authors": [
+        "J. Liang",
+        "Linxuan Wang",
+        "G. Lin",
+        "Q. Song"
+      ],
+      "venue": "NeurIPS 2026",
+      "links": []
+    },
+    {
+      "title": "Bayesian Sparse Learning of Joint Quantile Planes Estimation",
+      "authors": [
+        "Linxuan Wang"
+      ],
+      "venue": "Master’s thesis · Duke University, 2024",
+      "links": [
+        {
+          "label": "Thesis",
+          "url": "https://hdl.handle.net/10161/31067"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Research Intern",
+      "organization": "Ant Group · Inclusion AI LLaDA Team",
+      "dates": "May – Sep 2026"
+    }
+  ],
+  "education": [
+    {
+      "role": "PhD in Statistics",
+      "organization": "Purdue University",
+      "dates": "2024 – 2028 (expected)"
+    },
+    {
+      "role": "MS in Statistics",
+      "organization": "Duke University",
+      "dates": "2022 – 2024"
+    },
+    {
+      "role": "BS in Mathematics & BA in Economics",
+      "organization": "Wuhan University",
+      "dates": "2018 – 2022"
+    }
+  ],
+  "service": "Conference reviewer: ICLR 2027."
+}
