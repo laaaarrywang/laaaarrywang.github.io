@@ -5,7 +5,7 @@
   "bio": [
     "I am a third-year PhD student in Statistics at Purdue University, advised by Prof. Guang Lin and Prof. Qifan Song.",
     "My research focuses on efficient large language models, ranging from diffusion language models to speculative decoding. I develop pretraining methods that teach diffusion language models to self-correct, and tree-based speculative decoding methods that accelerate LLM inference.",
-    "From May to September 2026, I was a research intern with the Inclusion AI LLaDA team at Ant Group, mentored by Dr. Jianguo Li. I worked on continuous diffusion language models and speculative decoding, and co-led the UBTree project on parallel tree drafting for efficient LLM inference.",
+    "In summer 2026, I was a research intern with the Inclusion AI LLaDA team at Ant Group, mentored by Dr. Jianguo Li. I worked on continuous diffusion language models and speculative decoding.",
     "Previously, I received my M.S. in Statistics from Duke University, where I worked with Prof. Surya Tokdar, and my B.S. in Mathematics and B.A. in Economics from Wuhan University."
   ],
   "email": "wang6559@purdue.edu",
