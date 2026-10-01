@@ -85,7 +85,7 @@ html = f'''<!doctype html>
     {education_section}
     {service_section}
   </main>
-  <footer><span>© {date.today().year} {name}</span><span>Last updated: {date.today().strftime('%B %Y')}</span></footer>
+  <footer><div>Copyright © {date.today().year} {name}. <span class="footer-credit">Powered by <a href="https://www.python.org/">Python</a>. Hosted by <a href="https://pages.github.com/">GitHub Pages</a>.</span></div><span>Last updated: {date.today():%B} {date.today().day}, {date.today().year}.</span></footer>
 </body>
 </html>
 '''
