@@ -123,7 +123,9 @@
           "label": "Paper",
           "url": "https://arxiv.org/abs/2607.27431"
         }
-      ]
+      ],
+      "image": "assets/se3-meanflow.png",
+      "image_alt": "SE(3)-MeanFlow few-step inference: an average-velocity network transforms a noisy protein backbone into a generated backbone using SE(3) updates."
     },
     {
       "title": "Breaking the √d Communication Barrier in Federated Sampling with Adaptive Hamiltonian Monte Carlo",

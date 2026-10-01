@@ -10,6 +10,8 @@ Publication figures: `assets/scdd.png` is the training/inference panel extracted
 
 `assets/federated-hmc.png` is the centralized/federated HMC illustration (Figure 1 in `Downloads/adaptiveHMC_ADA___Copy_.pdf`), extracted from its matching source archive at `icml2024/Figures/motivation1.png`.
 
+`assets/se3-meanflow.png` is the few-step inference diagram (Figure 1, page 3) extracted from `Downloads/se3meanflow.pdf`.
+
 Edit `content.json`. Put your portrait in `assets/portrait.jpg` and set `photo` to that path. Put a CV in `assets/cv.pdf` and add a link. Empty experience entries are hidden; empty news and publication sections show a short placeholder.
 
 Example content entries (replace every example value with your own information):
