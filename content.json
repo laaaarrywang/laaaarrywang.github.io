@@ -134,7 +134,9 @@
         "Q. Song"
       ],
       "venue": "NeurIPS 2026",
-      "links": []
+      "links": [],
+      "image": "assets/federated-hmc.png",
+      "image_alt": "Centralized and federated Hamiltonian Monte Carlo: local leapfrog trajectories alternate with communication and synchronization across clients."
     },
     {
       "title": "Bayesian Sparse Learning of Joint Quantile Planes Estimation",
