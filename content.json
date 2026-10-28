@@ -69,6 +69,10 @@
         {
           "label": "HuggingFace",
           "url": "https://huggingface.co/collections/inclusionAI/ubtree"
+        },
+        {
+          "label": "Project",
+          "url": "https://www.inclusion-ai.org/ubtree/"
         }
       ],
       "summary": "Parallel tree drafting with a bigram selector and tree-native training for efficient speculative decoding.",
