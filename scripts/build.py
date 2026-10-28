@@ -46,7 +46,7 @@ links = list(data.get('links', []))
 email = f'<p class="contact-email">Email: {text(data["email"].replace("@", " [at] ").replace(".", " [dot] "))}</p>' if data.get('email') else ''
 bio = ''.join(f'<p>{linked_text(p)}</p>' for p in data.get('bio', []))
 news = ''.join(f'<li><time>{text(n["date"])}</time><span>{text(n["text"])}' +
-               (f' {link(n["link"])}' if n.get('link') else '') + '</span></li>'
+               ''.join(f' {link(l)}' for l in n.get('links', [n['link']] if n.get('link') else [])) + '</span></li>'
                for n in data.get('news', []))
 pubs = []
 for p in data.get('publications', []):

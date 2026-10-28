@@ -28,10 +28,16 @@
     {
       "date": "Sep 2026",
       "text": "UBTree, our work on parallel tree drafting for speculative decoding, is available.",
-      "link": {
-        "label": "Paper ↗",
-        "url": "https://arxiv.org/abs/2609.39972"
-      }
+      "links": [
+        {
+          "label": "Project ↗",
+          "url": "https://www.inclusion-ai.org/ubtree/"
+        },
+        {
+          "label": "Paper ↗",
+          "url": "https://www.inclusion-ai.org/ubtree/UBTree.pdf"
+        }
+      ]
     },
     {
       "date": "Sep 2026",
@@ -40,10 +46,16 @@
     {
       "date": "Apr 2026",
       "text": "Generalized Discrete Diffusion with Self-Correction was accepted to ICML 2026.",
-      "link": {
-        "label": "Project ↗",
-        "url": "https://laaaarrywang.github.io/Self-Correcting-Discrete-Diffusion/"
-      }
+      "links": [
+        {
+          "label": "Project ↗",
+          "url": "https://laaaarrywang.github.io/Self-Correcting-Discrete-Diffusion/"
+        },
+        {
+          "label": "Paper ↗",
+          "url": "https://arxiv.org/abs/2603.02230"
+        }
+      ]
     }
   ],
   "publications": [
@@ -54,6 +66,7 @@
         "Linxuan Wang*",
         "X. Peng*",
         "H. Liu",
+        "X. Guo",
         "Y. Chen",
         "G. Liu",
         "G. Lin",
@@ -64,7 +77,7 @@
       "links": [
         {
           "label": "Paper",
-          "url": "https://arxiv.org/abs/2609.39972"
+          "url": "https://www.inclusion-ai.org/ubtree/UBTree.pdf"
         },
         {
           "label": "HuggingFace",
